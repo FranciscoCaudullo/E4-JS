@@ -9,6 +9,8 @@ const imageTT = document.getElementById("imagePokemon");
 const requestPokemon = async (pokemon) => {
 	if (!pokemon) {
 		alert("Debes ingresar un numero");
+	} else if (pokemon > 905) {
+		alert("No hay Pokemon con ese ID");
 	}
 
 	const call = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon);
